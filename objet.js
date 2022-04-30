@@ -7,9 +7,13 @@ let episode = {
 
 }
 
+let episodeTilte = episode['title']
+let episodeDuration = episode['duration']
+let episodeHasBeenWatched = episode['hasBeenWatched']
+
 
 document.querySelector("#episode-info").innerHTML = 
-`Titre : ${episode.title} <br>
-Duree : ${episode.duration} <br>
-${episode.hasBeenWatched ? 'DEjas vu ' : "pas vue"}
+`Titre : ${episodeTilte} <br>
+Duree : ${episodeDuration} <br>
+${episodeHasBeenWatched ? 'DEjas vu ' : "pas vue"}
 `
