@@ -5,9 +5,11 @@ const button = document.getElementById("bouton")
 
 const ageInput = document.getElementById('age')
 
+const parentalInput = document.getElementById("parental")
+
 let age;
 let ageMajor = 18
-
+let isControlParentalActive
 
 
 
@@ -23,12 +25,16 @@ function onConfirm(){
     console.log("ici")
     age = parseInt(ageInput.value)
 
+
     if(isNaN(age)){
         alert("C'est pas nombre")
         return
     }
 
-    if(age < ageMajor){
+    isControlParentalActive = parentalInput.checked
+
+
+    if(age < ageMajor && isControlParentalActive){
         refuser()
     }else{
         valider()
